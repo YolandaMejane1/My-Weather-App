@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>My weather application</title>
+  </head>
+  <body>
+    <div class="cloud"></div>
+    <div class="weather-app">
+      <header>
+        <form id="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            class="search-input"
+            id="search-input"
+          />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+      </header>
+      <main>
+        <!-- Current Weather Section -->
+        <div class="current-weather">
+          <div>
+            <h1 class="current-city" id="current-city">Paris</h1>
+            <p class="current-details">
+              <span id="current-date"></span>, <span id="weather-condition">rain</span><br />
+              <span id="humidity">Humidity: <strong>87%</strong></span>, 
+              <span id="wind-speed">Wind: <strong>7.2 km/h</strong></span>
+            </p>
+          </div>
+          <div class="current-temperature">
+            <img id="weather-icon" src="assets/clear-sky-night.png" alt="Weather Icon" class="current-temperature-icon" />
+            <span class="current-temperature-value" id="current-temperature">24</span>
+            <span class="current-temperature-unit">°C</span>
+          </div>
+        </div>
+        
+        <!-- Weather Forecast Section (New) -->
+        <div class="weather-forecast" id="weather-forecast">
+          <h2>3-Day Forecast</h2>
+          <div class="forecast-container">
+            <!-- Day 1 Forecast -->
+            <div class="forecast-day" id="forecast-day-1">
+              <h3 id="day-1-date">Monday</h3>
+              <img id="day-1-icon" src="assets/clear-sky-day.png" alt="Weather Icon" class="forecast-icon" />
+              <p>
+                <span id="day-1-condition">Clear Sky</span><br />
+                <span id="day-1-temperature">24°C</span>
+              </p>
+            </div>
+            <!-- Day 2 Forecast -->
+            <div class="forecast-day" id="forecast-day-2">
+              <h3 id="day-2-date">Tuesday</h3>
+              <img id="day-2-icon" src="assets/few-clouds-day.png" alt="Weather Icon" class="forecast-icon" />
+              <p>
+                <span id="day-2-condition">Few Clouds</span><br />
+                <span id="day-2-temperature">22°C</span>
+              </p>
+            </div>
+            <!-- Day 3 Forecast -->
+            <div class="forecast-day" id="forecast-day-3">
+              <h3 id="day-3-date">Wednesday</h3>
+              <img id="day-3-icon" src="assets/rain-day.png" alt="Weather Icon" class="forecast-icon" />
+              <p>
+                <span id="day-3-condition">Rain</span><br />
+                <span id="day-3-temperature">18°C</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>      
+      <footer>
+        <p>
+          This project was coded by
+          <a href="https://github.com/YolandaMejane1" target="_blank">Yolanda Mejane</a> and is
+          <a href="https://github.com/YolandaMejane1/My-Weather-App" target="_blank"> on GitHub</a> and
+          <a href="https://weather-app-for-shecodes.netlify.app" target="_blank">hosted on Netlify</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

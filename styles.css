@@ -1,0 +1,142 @@
+body {
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  a {
+    color: #885df1;
+  }
+  
+  .weather-app {
+    background: rgb(255, 255, 255);
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  header {
+    border-bottom: 1px solid #f9f7fe;
+    padding-bottom: 30px;
+  }
+  
+  .search-input {
+    background-color: #f9f7fe;
+    border: none;
+    color: rgba(39, 33, 66, 0.4);
+    font-size: 16px;
+    padding: 20px;
+    width: 75%;
+    border-radius: 6px;
+  }
+  
+  .search-button {
+    margin-left: 5px;
+    font-size: 16px;
+    background-color: rgba(143, 60, 245, 0.896);
+    color: white;
+    border: none;
+    padding: 20px;
+    line-height: 1;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+  }
+  
+  main {
+    padding: 30px 0;
+  }
+  
+  .current-temperature {
+    font-size: 48px;
+  }
+  
+  .current-weather {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .current-city {
+    font-family: "Pacifico", sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: rgb(27, 26, 27);
+    margin: 0;
+  }
+  
+  .current-details {
+    color: rgba(39, 33, 66, 0.4);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  
+  .current-details strong {
+    color: #dd4270;
+  }
+  
+  strong {
+    color: #cf456f;
+  }
+  
+  .current-temperature-icon {
+    position: relative;
+    top: -8px;
+    font-size: 40px;
+    margin-right: 10px;
+  }
+  
+  .current-temperature-value {
+    font-size: 80px;
+    font-weight: bold;
+  }
+  
+  .current-temperature-unit {
+    font-size: 28px;
+    position: relative;
+    top: -38px;
+  }
+  
+  footer {
+    border-top: 1px solid #f9f7fe;
+    text-align: center;
+    padding-top: 15px;
+    color: rgba(39, 33, 66, 0.4);
+  }
+  
+  .weather-forecast {
+    margin-top: 30px;
+  }
+  
+  .forecast-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .forecast-day {
+    text-align: center;
+  }
+  
+  .forecast-icon {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease;
+  }
+  
+  .forecast-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  @media (max-width: 600px) {
+    .current-city {
+      font-size: 28px;
+    }
+  
+    .current-temperature-value {
+      font-size: 60px;
+    }
+  }
