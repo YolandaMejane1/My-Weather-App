@@ -17,7 +17,6 @@ function getWeatherData(city) {
     .then(response => {
       const weatherData = response.data;
 
-      // Today's weather
       const forecastToday = weatherData.daily[0];
       const city = weatherData.city;
       const temperatureToday = Math.round(forecastToday.temperature.day);
@@ -35,16 +34,15 @@ function getWeatherData(city) {
       weatherIcon.src = `assets/${iconToday}.png`;
       weatherIcon.alt = descriptionToday;
 
-      // Update the forecast for the next 3 days
-      const days = [1, 2, 3]; // Next 3 days forecast
+      // Updating the forecast for the next 3 days
+      const days = [1, 2, 3]; 
       const today = new Date();
 
       days.forEach((day, index) => {
         const forecast = weatherData.daily[day];
         const forecastDate = new Date(today);
-        forecastDate.setDate(today.getDate() + day); // Set the date to the next day
+        forecastDate.setDate(today.getDate() + day); 
 
-        // Update the forecast elements with data
         const formattedDate = forecastDate.toLocaleDateString('en-US', { weekday: 'long' });
         document.querySelector(`#day-${index + 1}-date`).textContent = formattedDate;
 
